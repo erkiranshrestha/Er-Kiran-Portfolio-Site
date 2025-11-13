@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Er. Kiran Prakash Shrestha — Personal Website</title>
+  <meta name="description" content="Er. Kiran Prakash Shrestha — Civil Engineer, Teacher, Author">
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#aab3c9; --accent:#1fb6ff; --highlight:#3b82f6; --maxw:1000px; --text:#e9f0fb;
+    }
+    [data-theme="light"]{
+      --bg:#f4f7fb; --card:#ffffff; --muted:#4b5563; --accent:#2563eb; --highlight:#1e40af; --text:#111827;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0;transition:background 0.3s,color 0.3s,border-color 0.3s;}
+    html,body{height:100%;font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);scroll-behavior:smooth;}
+    .wrap{max-width:var(--maxw);margin:40px auto;padding:24px}
+
+    header{display:flex;align-items:center;gap:28px;flex-wrap:wrap;justify-content:center;text-align:center;position:relative}
+    .photo{width:180px;height:180px;border-radius:50%;overflow:hidden;flex-shrink:0;box-shadow:0 8px 30px rgba(0,0,0,0.4);border:3px solid var(--accent)}
+    .photo img{width:100%;height:100%;object-fit:cover;display:block}
+
+    .theme-toggle{position:absolute;top:0;right:0;background:none;border:none;cursor:pointer;font-size:1.6rem;color:var(--accent);padding:8px;border-radius:50%;}
+    .theme-toggle:hover{transform:scale(1.1);}
+
+    .title h1{font-size:2rem;margin-bottom:6px}
+    .title .sub{color:var(--muted);font-weight:500}
+    .typing{font-size:1.1rem;color:var(--accent);margin-top:6px;min-height:28px;position:relative;display:inline-block;}
+    .typing::after{content:'|';position:absolute;right:-8px;color:var(--accent);animation:blink 0.8s steps(1) infinite;}
+    @keyframes blink{50%{opacity:0;}}
+
+    .meta{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+    .pill{background:rgba(255,255,255,0.05);padding:8px 14px;border-radius:20px;font-size:0.9rem;color:var(--muted);border:1px solid rgba(255,255,255,0.05)}
+
+    nav{margin-top:20px;text-align:center}
+    .navlink{color:var(--muted);text-decoration:none;margin:0 10px;font-weight:500;transition:0.3s}
+    .navlink:hover{color:var(--accent)}
+
+    main{display:grid;grid-template-columns:1fr 320px;gap:24px;margin-top:40px}
+    @media (max-width:880px){main{grid-template-columns:1fr}header{text-align:center}}
+
+    .card{background:linear-gradient(145deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));padding:22px 20px;border-radius:16px;border:1px solid rgba(255,255,255,0.06);box-shadow:0 8px 26px rgba(0,0,0,0.1);backdrop-filter:blur(8px)}
+    section h2{margin-bottom:10px;font-size:1.2rem;color:var(--accent)}
+    p{color:var(--muted);line-height:1.6;margin-bottom:12px}
+
+    .info-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+    .info-item{background:rgba(255,255,255,0.03);padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.05)}
+    .info-item strong{display:block;margin-bottom:4px}
+
+    .publications a{color:var(--accent);text-decoration:none;font-weight:500}
+
+    .contact-list{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+    .contact-row{display:flex;justify-content:space-between;align-items:center;padding:10px 12px;border-radius:10px;background:rgba(255,255,255,0.025);border:1px solid rgba(255,255,255,0.04)}
+    .socials{display:flex;gap:10px;margin-top:8px;justify-content:center;flex-wrap:wrap}
+    .socials a{padding:8px 12px;border-radius:8px;text-decoration:none;background:rgba(255,255,255,0.03);color:var(--muted);font-weight:500;display:flex;align-items:center;gap:6px;transition:0.3s}
+    .socials a:hover{color:var(--accent);transform:translateY(-2px)}
+
+    .socials img{width:24px;height:24px;border-radius:4px}
+
+    footer{margin-top:40px;color:var(--muted);font-size:0.9rem;text-align:center;border-top:1px solid rgba(255,255,255,0.05);padding-top:14px}
+
+    .btn{display:inline-block;padding:8px 14px;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;transition:0.3s;border:none;cursor:pointer}
+    .btn:hover{background:var(--highlight);}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <button class="theme-toggle" type="button" title="Toggle theme" aria-label="Toggle theme" id="themeToggle">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="1em" height="1em" class="theme-toggle__dark-side" fill="currentColor" viewBox="0 0 32 32">
+          <path d="M16 .5C7.4.5.5 7.4.5 16S7.4 31.5 16 31.5 31.5 24.6 31.5 16 24.6.5 16 .5zm0 28.1V3.4C23 3.4 28.6 9 28.6 16S23 28.6 16 28.6z" />
+        </svg>
+      </button>
+
+      <div class="photo">
+        <img src="image_eng.jpeg" alt="Kiran Prakash Shrestha">
+      </div>
+      <div class="title">
+        <h1>Er. Kiran Prakash Shrestha</h1>
+        <div class="typing" id="typing"></div>
+        <div class="meta">
+          <div class="pill">Koteshwor, Kathmandu</div>
+          <div class="pill">B.E. Civil Engineering — IOST, Thapathali</div>
+          <div class="pill">Teaching • 3+ years</div>
+        </div>
+      </div>
+    </header>
+
+    <nav>
+      <a class="navlink" href="#about">About</a>
+      <a class="navlink" href="#work">Work</a>
+      <a class="navlink" href="#contact">Contact</a>
+    </nav>
+
+    <main>
+      <div>
+        <section id="about" class="card">
+          <h2>About Me</h2>
+          <p>I'm Kiran Prakash Shrestha, a civil engineer with a B.E. in Civil Engineering from IOST, Thapathali Campus. I'm passionate about designing sustainable structures and managing meaningful projects that make a positive impact on our communities and environment.</p>
+          <p>My work focuses on creating innovative, eco-friendly solutions that bridge engineering excellence with environmental responsibility. I believe in managing projects that not only meet technical requirements but also contribute meaningfully to society.</p>
+        </section>
+
+        <section id="work" class="card" style="margin-top:20px">
+          <h2>Education & Experience</h2>
+          <div class="info-list">
+            <div class="info-item">
+              <strong>Education</strong>
+              B.E. in Civil Engineering<br>IOST, Thapathali Campus
+            </div>
+            <div class="info-item">
+              <strong>Teaching</strong>
+              3+ years of teaching experience
+            </div>
+          </div>
+          <div style="margin-top:14px">
+            <h3 style="margin-bottom:6px">Publications</h3>
+            <p class="publications">Books published: 3 — <a href="https://heritagebooks.com.np/authors/er-kiran-prakash-shrestha/" target="_blank" rel="noopener">View publications</a></p>
+          </div>
+        </section>
+      </div>
+
+      <aside>
+        <div id="contact" class="card">
+          <h2>Contact</h2>
+          <div class="contact-list">
+            <div class="contact-row">
+              <div>
+                <div class="muted">Phone</div>
+                <div><strong id="phone">+977 9860905059</strong></div>
+              </div>
+              <div><button class="btn" id="copyPhone">Copy</button></div>
+            </div>
+
+            <div class="contact-row">
+              <div>
+                <div class="muted">Email</div>
+                <div><strong id="email">erkiranshrestha@gmail.com</strong></div>
+              </div>
+              <div><a class="btn" href="mailto:erkiranshrestha@gmail.com">Email</a></div>
+            </div>
+
+            <div>
+              <div class="muted">Social</div>
+              <div class="socials">
+                <a href="https://www.facebook.com/leokiranprakashshrestha42" target="_blank" rel="noopener">
+                  <img src="facebook.png" alt="Facebook logo"> Facebook
+                </a>
+                <a href="https://www.instagram.com/leokiran.prakash_shrestha/" target="_blank" rel="noopener">
+                  <img src="instagram.png" alt="Instagram logo"> Instagram
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:20px;text-align:center">
+          <h3 style="margin-bottom:10px">Quick Actions</h3>
+          <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+            <a class="btn" href="https://heritagebooks.com.np/authors/er-kiran-prakash-shrestha/" target="_blank" rel="noopener">My Books</a>
+            <a class="btn" href="#about">Hire / Collaborate</a>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      © 2025 Er. Kiran Prakash Shrestha. All rights reserved. | By <a href="https://www.instagram.com/crestha.nimeshhhh/" target="_blank" rel="noopener">Nimesh Shrestha</a>
+    </footer>
+  </div>
+
+  <script>
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',function(e){
+        const href=this.getAttribute('href');
+        if(href.length>1){
+          e.preventDefault();
+          const el=document.querySelector(href);
+          if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+        }
+      })
+    });
+
+    // Copy phone button
+    document.getElementById('copyPhone').addEventListener('click',async function(){
+      const text=document.getElementById('phone').innerText.trim();
+      try{
+        await navigator.clipboard.writeText(text);
+        this.textContent='Copied';
+        setTimeout(()=>this.textContent='Copy',1500);
+      }catch(e){alert('Phone: '+text);}
+    });
+
+    // Theme toggle
+    const toggle=document.getElementById('themeToggle');
+    const root=document.documentElement;
+    let theme=localStorage.getItem('theme')||'dark';
+    root.dataset.theme=theme;
+
+    toggle.addEventListener('click',()=>{
+      theme=theme==='dark'?'light':'dark';
+      root.dataset.theme=theme;
+      localStorage.setItem('theme',theme);
+    });
+
+    // Smooth typing animation with cursor
+    const typingElement=document.getElementById('typing');
+    const roles=['Civil Engineer','Teacher','Author'];
+    let roleIndex=0,charIndex=0,deleting=false;
+
+    function type(){
+      const current=roles[roleIndex];
+      typingElement.textContent='I am a '+current.substring(0,charIndex);
+      if(!deleting && charIndex<current.length){
+        charIndex++;
+        setTimeout(type,120);
+      }else if(deleting && charIndex>0){
+        charIndex--;
+        setTimeout(type,70);
+      }else{
+        deleting=!deleting;
+        if(!deleting){
+          roleIndex=(roleIndex+1)%roles.length;
+        }
+        setTimeout(type,800);
+      }
+    }
+    type();
+  </script>
+</body>
+</html>
